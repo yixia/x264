@@ -9,17 +9,17 @@ fi
 SOURCE=`pwd`
 PREFIX=$SOURCE/build/android
 
-PREBUILT=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.7/prebuilt
-PLATFORM=$ANDROID_NDK/platforms/android-14/arch-arm
+SYSROOT=$ANDROID_NDK/platforms/android-14/arch-arm
+CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
 
 ./configure  --prefix=$PREFIX \
-  --cross-prefix=$PREBUILT/linux-x86_64/bin/arm-linux-androideabi- \
+  --cross-prefix=$CROSS_PREFIX \
   --enable-pic \
   --enable-static \
   --disable-cli \
   --disable-asm \
   --host=arm-linux \
-  --sysroot=$PLATFORM
+  --sysroot=$SYSROOT
 
 make clean
 make -j4 install || exit 1
