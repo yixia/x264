@@ -9,8 +9,8 @@ fi
 SOURCE=`pwd`
 PREFIX=$SOURCE/build/android
 
-SYSROOT=$ANDROID_NDK/platforms/android-14/arch-arm
-CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
+SYSROOT=$ANDROID_NDK/platforms/android-18/arch-arm
+CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
 
 ./configure  --prefix=$PREFIX \
   --cross-prefix=$CROSS_PREFIX \
