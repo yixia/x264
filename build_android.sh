@@ -17,7 +17,6 @@ CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x8
   --enable-pic \
   --enable-static \
   --disable-cli \
-  --disable-asm \
   --host=arm-linux \
   --sysroot=$SYSROOT
 
