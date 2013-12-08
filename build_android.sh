@@ -21,5 +21,5 @@ CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x8
 	--sysroot=$SYSROOT
 
 make clean
-make -j4 install || exit 1
+make STRIP= -j4 install || exit 1
 
