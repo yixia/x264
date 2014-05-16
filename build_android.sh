@@ -20,7 +20,7 @@ fi
 SOURCE=`pwd`
 PREFIX=$SOURCE/build/android
 
-SYSROOT=$ANDROID_NDK/platforms/android-14/arch-arm
+SYSROOT=$ANDROID_NDK/platforms/android-19/arch-arm
 CROSS_PREFIX=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/$HOST_SYSTEM/bin/arm-linux-androideabi-
 EXTRA_CFLAGS="-march=armv7-a -mfloat-abi=softfp -mfpu=neon -D__ARM_ARCH_7__ -D__ARM_ARCH_7A__"
 EXTRA_LDFLAGS="-nostdlib"
